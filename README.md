@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# 1. 프로젝트 Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✔ 프로젝트명
+✔ 어떤 프로젝트인지 소개
+✔ 디렉토리 구조
 
-## Available Scripts
+# 2. 프로젝트 정보
 
-In the project directory, you can run:
+✔ 설치방법(Getting Started / Installation)
+✔ 컴파일 방법, 사용 환경, 브라우저 서포트, 개발스택, 구현 목록(명세)
+✔ 간단한 사용 방법 및 예제
 
-### `npm start`
+3. 프로젝트 결과물
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✔ 기능별 사진 / 영상
+✔ 코드설명, 후기(짧고 간결하게 써야함, 내용이 길어질 경우 블로그에 작성한뒤 링크로 연결해주는게 좋다)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Contribute
 
-### `npm test`
+✔ 다른 사람들이 코드에 Contribute하기 쉽도록 방법 설명
+✔ 어떤 류의 Contribute를 원하는지 또는 Contributing 규칙 등을 적을 수도 있다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. LICENSE
 
-### `npm run build`
+✔ 라이선스 : 저작물의 수정 배포에 대한 권한이나 저작권들에 대한 조항들
+✔ 보통 MIT License를 많이 사용하고 BSD 라이선스도 많이 사용한다
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. 외부리소스 정보
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✔ 프로젝트에 포함된 외부 코드나 리소스 정보(각각의 출처 및 배포 라이선스)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+7. Code Status
 
-### `npm run eject`
+✔ Shield라는 것을 사용하여 [build | passing]과 같은 정보를 줄 수 있다.
+✔ 프로젝트가 커질수록 도움이 되는 부분
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Axios
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+중복된 부분을 효율적으로 사용하기 위해 Axios 인스턴스를 사용하였다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##install
+npm install --save styled-components
+npm install react-router-dom --save
+npm install axios --save

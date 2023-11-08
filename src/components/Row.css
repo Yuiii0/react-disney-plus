@@ -1,0 +1,30 @@
+.swiper-pagination {
+  text-align: center;
+}
+.swiper-pagination-bullet {
+  background-color: gray !important ;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: white !important ;
+}
+.swiper-button-prev {
+  color: white !important;
+  transition: transform 400ms;
+}
+.swiper-button-prev:hover {
+  transform: scale(1.2);
+}
+
+.swiper-button-next {
+  color: white !important;
+  transition: transform 400ms;
+}
+.swiper-button-next:hover {
+  transform: scale(1.2);
+}
+.swiper-button-prev:after,
+.swiper-button-next::after {
+  font-weight: 600 !important;
+  font-size: 1.3rem !important;
+}
