@@ -9,8 +9,6 @@ const Banner = () => {
   const [movie, setMovie] = useState({});
   const [isClick, setIsClick] = useState(false);
 
-  console.log(isClick);
-
   useEffect(() => {
     fetchData();
   }, []);

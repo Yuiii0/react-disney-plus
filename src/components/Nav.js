@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const [navShow, setNavShow] = useState(false);
+
   const navigate = useNavigate();
 
   const handleScroll = () => {

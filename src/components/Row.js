@@ -10,63 +10,77 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import styled from "styled-components";
 import axios from "../api/utils/instance";
+import MovieModal from "./MovieModal";
 const Row = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedMovie, setselectedMovie] = useState({});
 
   const fetchMovieData = useCallback(async () => {
     const response = await axios.get(fetchUrl);
     setMovies(response.data.results);
-    console.log("response", response.data.results);
   }, [fetchUrl]);
 
   useEffect(() => {
     fetchMovieData();
   }, [fetchMovieData]);
 
-  return (
-    <Container>
-      <h2>{title}</h2>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        navigation
-        loop={true}
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        breakpoints={{
-          1378: {
-            slidesPerView: 5, //한번에 보이는 슬라이드 개수
-            slidesPerGroup: 5, //몇개씩 슬라이드 할지
-          },
-          998: {
-            slidesPerView: 4, //한번에 보이는 슬라이드 개수
-            slidesPerGroup: 4, //몇개씩 슬라이드 할지
-          },
-          625: {
-            slidesPerView: 3, //한번에 보이는 슬라이드 개수
-            slidesPerGroup: 3, //몇개씩 슬라이드 할지
-          },
+  //modal클릭시
+  const handleClick = (movie) => {
+    setModalOpen(true);
+    setselectedMovie(movie);
+  };
 
-          0: {
-            slidesPerView: 2, //한번에 보이는 슬라이드 개수
-            slidesPerGroup: 2, //몇개씩 슬라이드 할지
-          },
-        }}
-      >
-        <Content>
-          {movies.map((movie) => (
-            <SwiperSlide key={movie.id}>
-              <Wrap>
-                <img
-                  key={movie.id}
-                  src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-                  alt={movie.name}
-                ></img>
-              </Wrap>
-            </SwiperSlide>
-          ))}
-        </Content>
-      </Swiper>
-    </Container>
+  return (
+    <>
+      <Container>
+        <h2>{title}</h2>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          navigation
+          loop={true}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          breakpoints={{
+            1378: {
+              slidesPerView: 5, //한번에 보이는 슬라이드 개수
+              slidesPerGroup: 5, //몇개씩 슬라이드 할지
+            },
+            998: {
+              slidesPerView: 4, //한번에 보이는 슬라이드 개수
+              slidesPerGroup: 4, //몇개씩 슬라이드 할지
+            },
+            625: {
+              slidesPerView: 3, //한번에 보이는 슬라이드 개수
+              slidesPerGroup: 3, //몇개씩 슬라이드 할지
+            },
+
+            0: {
+              slidesPerView: 2, //한번에 보이는 슬라이드 개수
+              slidesPerGroup: 2, //몇개씩 슬라이드 할지
+            },
+          }}
+        >
+          <Content>
+            {movies.map((movie) => (
+              <SwiperSlide key={movie.id}>
+                <Wrap>
+                  <img
+                    onClick={() => handleClick(movie)}
+                    key={movie.id}
+                    src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+                    alt={movie.name}
+                  ></img>
+                </Wrap>
+              </SwiperSlide>
+            ))}
+          </Content>
+        </Swiper>
+      </Container>
+      {modalOpen && (
+        <MovieModal {...selectedMovie} setModalOpen={setModalOpen} />
+      )}
+    </>
   );
 };
 
