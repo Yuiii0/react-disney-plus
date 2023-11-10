@@ -1,0 +1,38 @@
+.search-container {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  background-color: black;
+  padding: 6rem 0;
+}
+.movies {
+  padding-right: 0.5rem;
+  padding-bottom: 7rem;
+}
+.movie__poster__container {
+  padding-right: 0.5rem;
+  padding-bottom: 3rem;
+  flex: 1 1 auto;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.movie__poster__container:hover {
+  transform: scale(0.98);
+}
+.movie__poster {
+  width: 90%;
+  border-radius: 5px;
+}
+
+.no-results {
+  color: #c5c5c5;
+}
+
+.no-results__text {
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

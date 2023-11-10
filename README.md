@@ -42,3 +42,14 @@
 npm install --save styled-components
 npm install react-router-dom --save
 npm install axios --save
+
+#문제점
+firebase 첫 사용
+로그인 후 main페이지로 이동하면 user정보를 state에 저장했음에도 불구하고 페이지가 이동되면 user정보가 사라졌다.
+이걸 로컬스토리지에 저장한다.
+
+#해결 방안
+react의 상태(state)는 페이지 간에 유지되지 않기 때문에 당연한 결과이다.
+상태는 컴포넌트가 다시 렌더링될 때마다 초기화되기 때문에 계속 user가 빈객체로 초기화된다.
+따라서 localStorage를 이용해 사용자의 유저를 저장하고,
+state의 initalstate값을 로컬스토리지로 얻은 user정보를 이용하므로 user정보를 계속해서 가지고 있을 수 있다.

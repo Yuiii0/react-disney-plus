@@ -75,6 +75,7 @@ const Title = styled.h1`
 const Description = styled.p`
   margin-top: 40px;
   font-size: 16px;
+  text-align: center;
 `;
 const Membership = styled.div`
   display: flex;
